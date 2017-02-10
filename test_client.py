@@ -11,7 +11,7 @@ test_auto = True
 
 if test_auto:
     client = AutoClient(ip, port)
-    client.connect(num_threads=50, fib_min=100, fib_max=2000, verbose=False, silent=False)
+    client.connect(num_threads=50, fib_min=4000, fib_max=5000, verbose=False, silent=False)
 else:
     client = HumanClient(ip, port)
     client.connect()
