@@ -176,8 +176,8 @@ def usage(message=''):
     if message != '':
         print(message)
 
-    print('FibClient.py improper usage')
-    print('Usage: python FibClient.py --port=<portnumber> [options] ')
+    print('fib_client.py improper usage')
+    print('Usage: python fib_client.py --port=<portnumber> [options] ')
     print('Options are:')
     print('  -i, --ip=        ip address of the fib server, defaults to localhost')
     print('  -p, --port=      port address of the server, required argument')
