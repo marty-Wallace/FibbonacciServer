@@ -1,19 +1,4 @@
-
-My implementation of a school assignment with the following requirements
-
-'''
-Given that our Fibonacci calculation looks like:
-def fib(n):
-   if n == 0:
-       return 0
-   elif n == 1:
-       return 1
-   else:
-       return fib(n-1) + fib(n-2)
-Using Python, design a socket server that will accept an unsigned integer (properly packed) and return a fibonacci value for the integer. Design a
-reliable protocol and implement both a client and server for calculating our Fibonacci values. Ensure that you can have more than one calculation
-occurring at any moment.
-'''
+##Fibonacci module 
 
 ###fib_server
 fib_server.py contains two classes FibonacciThreadedTCPRequestHandler and FibonacciThreadedTCPServer. Which can be implemented by following the example in test_client.py. I have optimized the calculations of the fibonacci numbers as far as I can and on my Dell Inspirion I am able to have 50 threads requesting fib numbers up to fib(50000) concurrently without any timeouts or incorrect answers.
