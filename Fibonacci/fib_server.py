@@ -59,11 +59,10 @@ class FibonacciThreadedTCPRequestHandler(BaseRequestHandler):
         :param n: the value of fib to calculate
         :return: fib(n)
         """
-        if n not in fib_dict:
+        length = len(fib_dict)
+        while length <= n:
+            fib_dict[length] = fib_dict[length - 1] + fib_dict[length - 2]
             length = len(fib_dict)
-            while length <= n:
-                fib_dict[length] = fib_dict[length - 1] + fib_dict[length - 2]
-                length = len(fib_dict)
         return fib_dict[n]
 
 # if module is imported this code won't run
