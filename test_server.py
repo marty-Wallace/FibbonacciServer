@@ -3,7 +3,9 @@ from Fibonacci import FibonacciThreadedTCPRequestHandler, FibonacciThreadedTCPSe
 '''
 Module to test out the Fibonacci server
 '''
-server = FibonacciThreadedTCPServer(('localhost', 0), FibonacciThreadedTCPRequestHandler)
+
+address = ('localhost', 0)
+server = FibonacciThreadedTCPServer(address)
 print(server.server_address)
 server.serve_forever()
 

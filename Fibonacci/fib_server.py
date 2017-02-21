@@ -8,8 +8,8 @@ class FibonacciThreadedTCPServer(ThreadingMixIn, TCPServer):
     FibonacciThreadedTCPRequestHandler to make optimized calculations.
     """
 
-    def __init__(self, server_address, request_handler_class, bind_and_activate=True):
-        TCPServer.__init__(self, server_address, request_handler_class, bind_and_activate=bind_and_activate)
+    def __init__(self, server_address):
+        TCPServer.__init__(self, server_address, FibonacciThreadedTCPRequestHandler, bind_and_activate=True)
         self.fib_dict = {0: 0, 1: 1, 2: 1}
 
 
@@ -67,9 +67,10 @@ class FibonacciThreadedTCPRequestHandler(BaseRequestHandler):
 
 # if module is imported this code won't run
 if __name__ == '__main__':
+    # port of 0 will request an open port from the kernel
     HOST, PORT = 'localhost', 0
 
-    with FibonacciThreadedTCPServer((HOST, PORT), FibonacciThreadedTCPRequestHandler) as server:
+    with FibonacciThreadedTCPServer((HOST, PORT)) as server:
         ip, port = server.server_address
         print("Starting FibServer at %s:%d" % (ip, port))
         print("Waiting for fibonacci requests...")
