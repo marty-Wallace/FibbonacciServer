@@ -150,6 +150,7 @@ class HumanClient(FibClient):
         """
         while True:
             bad_input = True
+            num = 0
             while bad_input:
                 try:
                     num = int(input('Please enter which fibonacci number you would like: '))
@@ -159,12 +160,13 @@ class HumanClient(FibClient):
                         bad_input = False
                 except ValueError as err:
                     print("Please enter a number")
-                fib = self.get_fibonacci_number(num)
-                if fib is None:
-                    print('Error: None returned by get_fibonacci_number(%s, %d, %d)' % (ip, port, num))
                     continue
-                print("Fib of %d is %d" % (num, fib))
-                print() # blank line
+            fib = self.get_fibonacci_number(num)
+            if fib is None:
+                print('Error: None returned by get_fibonacci_number(%s, %d, %d)' % (ip, port, num))
+                continue
+            print("Fib of %d is %d" % (num, fib))
+            print() # blank line
 
 
 def usage(message=''):
