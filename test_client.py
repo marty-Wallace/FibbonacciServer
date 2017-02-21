@@ -5,7 +5,7 @@ Module to test out the Fibonacci client
 '''
 
 ip = 'localhost'
-port = int(input('Port number of server: '))
+port = int(input('Please enter the port number of the Fibonacci server: '))
 
 test_auto = True
 
