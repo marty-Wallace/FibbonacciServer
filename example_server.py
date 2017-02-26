@@ -1,7 +1,7 @@
-from Fibonacci import FibonacciThreadedTCPRequestHandler, FibonacciThreadedTCPServer
+from Fibonacci import FibonacciThreadedTCPServer
 
 '''
-Module to test out the Fibonacci server
+Example file showing how to use the Fibonacci server
 '''
 
 address = ('localhost', 0)

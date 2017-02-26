@@ -1,7 +1,7 @@
 from Fibonacci import HumanClient, AutoClient
 
 '''
-Module to test out the Fibonacci client
+Example file showing how to use and how to test out the Fibonacci client
 '''
 
 ip = 'localhost'
