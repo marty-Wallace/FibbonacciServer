@@ -31,3 +31,4 @@ return fib_dict[n]
 ```
 In this format it is possible for many threads to write to the same location in the dictionary but since each number is based on the previous two numbers the data will stay intact. The length is updated to the length of the actual dict at the end of each loop iteration to avoid doing work done in other threads (as opposed to length += 1). 
 
+http://stackoverflow.com/questions/42564437/why-is-this-python-code-not-thread-safe
